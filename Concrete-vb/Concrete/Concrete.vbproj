@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CB275304-A12B-47C4-BD7A-A14A37FEED08}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Concrete.My.MyApplication</StartupObject>
+    <RootNamespace>Concrete</RootNamespace>
+    <AssemblyName>Concrete</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>C:\References\</OutputPath>
+    <DocumentationFile>Concrete.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Concrete.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonTools, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\References\CommonTools.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=11.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\References\CrystalDecisions.CrystalReports.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\References\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\References\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\References\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\References\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v3, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\References\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\References\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\References\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\References\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="mnComponents, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\References\mnComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="mnStimulsoftReport, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Stimulsoft.Base, Version=2021.1.1.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\References\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls, Version=2021.1.1.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\References\Stimulsoft.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls.Win, Version=2010.1.700.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\References\Stimulsoft.Controls.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Database, Version=2010.1.700.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\References\Stimulsoft.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Editor, Version=2010.1.700.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\References\Stimulsoft.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2010.1.700.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\References\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Check, Version=2010.1.700.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\References\Stimulsoft.Report.Check.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Design, Version=2010.1.700.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\References\Stimulsoft.Report.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Helper, Version=2010.1.700.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\References\Stimulsoft.Report.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Win, Version=2010.1.700.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\References\Stimulsoft.Report.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="baseClass\BaseConcert.vb" />
+    <Compile Include="baseClass\FinanceCycles.vb" />
+    <Compile Include="common\ApplicationEvents.vb" />
+    <Compile Include="baseClass\BasePeople.vb" />
+    <Compile Include="DataLayer\DataType.vb" />
+    <Compile Include="DataLayer\Domain.vb" />
+    <Compile Include="DataLayer\Enums.vb" />
+    <Compile Include="DataLayer\Globals.vb" />
+    <Compile Include="DataLayer\User.vb" />
+    <Compile Include="DateBox.Designer.vb">
+      <DependentUpon>DateBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DateBox.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="common\Excel.vb" />
+    <Compile Include="dml\CONCRETE_DML.vb" />
+    <Compile Include="frmAddConcreteItems.Designer.vb">
+      <DependentUpon>frmAddConcreteItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddConcreteItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConcertList.Designer.vb">
+      <DependentUpon>frmConcertList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConcertList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFinanceCycle.Designer.vb">
+      <DependentUpon>frmFinanceCycle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFinanceCycle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReceipt.Designer.vb">
+      <DependentUpon>frmReceipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReceipt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportFinance.Designer.vb">
+      <DependentUpon>frmReportFinance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportFinance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchList.Designer.vb">
+      <DependentUpon>frmSearchList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTemp.Designer.vb">
+      <DependentUpon>frmTemp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTemp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseClass\GridInit.vb" />
+    <Compile Include="mnDataGrid.Designer.vb">
+      <DependentUpon>mnDataGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mnDataGrid.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mnGrid.Designer.vb">
+      <DependentUpon>mnGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mnGrid.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clsCommon.vb" />
+    <Compile Include="frmPeople.Designer.vb">
+      <DependentUpon>frmPeople.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPeople.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPeopleList.Designer.vb">
+      <DependentUpon>frmPeopleList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPeopleList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mnComboBox.Designer.vb">
+      <DependentUpon>mnComboBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mnComboBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="mnJanusGrid.Designer.vb">
+      <DependentUpon>mnJanusGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mnJanusGrid.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="dml\PEOPLE_DML.vb" />
+    <Compile Include="Report.Designer.vb">
+      <DependentUpon>Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="common\Settings.vb" />
+    <Compile Include="common\Solar.vb" />
+    <Compile Include="common\SQL.vb" />
+    <Compile Include="common\Utility.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmAddConcreteItems.resx">
+      <DependentUpon>frmAddConcreteItems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFinanceCycle.resx">
+      <DependentUpon>frmFinanceCycle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPeople.resx">
+      <DependentUpon>frmPeople.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPeopleList.resx">
+      <DependentUpon>frmPeopleList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConcertList.resx">
+      <DependentUpon>frmConcertList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReceipt.resx">
+      <DependentUpon>frmReceipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportFinance.resx">
+      <DependentUpon>frmReportFinance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchList.resx">
+      <DependentUpon>frmSearchList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mnJanusGrid.resx">
+      <DependentUpon>mnJanusGrid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </Content>
+    <None Include="Resources\images1.jfif" />
+    <None Include="Resources\3.jfif" />
+    <None Include="Resources\images.jfif" />
+    <None Include="Resources\2.jfif" />
+    <None Include="Resources\copydoc.jpg" />
+    <None Include="Resources\copy.png" />
+    <None Include="Resources\CONTRACT.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\chain.jpg" />
+    <None Include="Resources\CALC.png" />
+    <None Include="Resources\ATT.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\view.png" />
+    <None Include="Resources\VER.png" />
+    <None Include="Resources\undo.png" />
+    <None Include="Resources\sort.jpg" />
+    <None Include="Resources\save_check.png" />
+    <None Include="Resources\remove-filter.png" />
+    <None Include="Resources\refresh_icon.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\print.png" />
+    <None Include="Resources\pre_status.png" />
+    <None Include="Resources\pre.png" />
+    <None Include="Resources\OK OK PRES.png" />
+    <None Include="Resources\NOT DEFINITE ALL.png" />
+    <None Include="Resources\next.png" />
+    <None Include="Resources\newexit.png" />
+    <None Include="Resources\Navigation-Up-2.gif" />
+    <None Include="Resources\Navigation-Last.gif" />
+    <None Include="Resources\Navigation-First.gif" />
+    <None Include="Resources\Navigation-Down-21.gif" />
+    <None Include="Resources\Navigation-Down-2.gif" />
+    <None Include="Resources\Navigation_Previous.png" />
+    <None Include="Resources\Navigation_Next.png" />
+    <None Include="Resources\merge.jpg" />
+    <None Include="Resources\last.png" />
+    <None Include="Resources\HELP.png" />
+    <None Include="Resources\first.png" />
+    <None Include="Resources\EXPORT_PRES.png" />
+    <None Include="Resources\Edit-Document-icon.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\Document-Copy-icon.png" />
+    <None Include="Resources\doc.jpg" />
+    <None Include="Resources\Del.png" />
+    <None Include="Resources\cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Report\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
