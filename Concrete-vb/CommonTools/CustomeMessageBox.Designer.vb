@@ -46,11 +46,11 @@ Partial Class CustomeMessageBox
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
-        Me.Label1.Location = New System.Drawing.Point(272, 9)
+        Me.Label1.Location = New System.Drawing.Point(73, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(86, 21)
+        Me.Label1.Size = New System.Drawing.Size(85, 21)
         Me.Label1.TabIndex = 5
-        Me.Label1.Text = "کاربرگرامی"
+        Me.Label1.Text = "Dear User"
         '
         'btnExit
         '
@@ -62,7 +62,7 @@ Partial Class CustomeMessageBox
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(92, 31)
         Me.btnExit.TabIndex = 8
-        Me.btnExit.Text = "خروج"
+        Me.btnExit.Text = "Exit"
         Me.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -91,11 +91,11 @@ Partial Class CustomeMessageBox
         Me.btnOk.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnOk.Image = Global.CommonTools.My.Resources.Resources._select
         Me.btnOk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnOk.Location = New System.Drawing.Point(261, 108)
+        Me.btnOk.Location = New System.Drawing.Point(58, 108)
         Me.btnOk.Name = "btnOk"
         Me.btnOk.Size = New System.Drawing.Size(99, 31)
         Me.btnOk.TabIndex = 4
-        Me.btnOk.Text = "تائید"
+        Me.btnOk.Text = "Ok"
         Me.btnOk.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnOk.UseVisualStyleBackColor = True
         '

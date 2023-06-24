@@ -19,10 +19,10 @@ Partial Class UcEmploymentCode
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Panel1 = New System.Windows.Forms.Panel
-        Me.btnPeopleList = New System.Windows.Forms.Button
-        Me.lblFullName = New System.Windows.Forms.Label
-        Me.txtEmploymentCode = New System.Windows.Forms.TextBox
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnPeopleList = New System.Windows.Forms.Button()
+        Me.lblFullName = New System.Windows.Forms.Label()
+        Me.txtEmploymentCode = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -66,12 +66,12 @@ Partial Class UcEmploymentCode
         Me.txtEmploymentCode.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.txtEmploymentCode.Location = New System.Drawing.Point(352, 0)
         Me.txtEmploymentCode.Name = "txtEmploymentCode"
-        Me.txtEmploymentCode.Size = New System.Drawing.Size(66, 23)
+        Me.txtEmploymentCode.Size = New System.Drawing.Size(66, 27)
         Me.txtEmploymentCode.TabIndex = 0
         '
         'UcEmploymentCode
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Controls.Add(Me.Panel1)

@@ -19,11 +19,11 @@ Partial Class ErrorCustomeMessageBox
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.lblMessage = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.btnExit = New System.Windows.Forms.Button
-        Me.picInfo = New System.Windows.Forms.PictureBox
-        Me.btnOk = New System.Windows.Forms.Button
+        Me.lblMessage = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnExit = New System.Windows.Forms.Button()
+        Me.picInfo = New System.Windows.Forms.PictureBox()
+        Me.btnOk = New System.Windows.Forms.Button()
         CType(Me.picInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -43,11 +43,11 @@ Partial Class ErrorCustomeMessageBox
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
-        Me.Label1.Location = New System.Drawing.Point(435, 9)
+        Me.Label1.Location = New System.Drawing.Point(72, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(30, 16)
+        Me.Label1.Size = New System.Drawing.Size(41, 21)
         Me.Label1.TabIndex = 5
-        Me.Label1.Text = "خطا"
+        Me.Label1.Text = "Erro"
         '
         'btnExit
         '
@@ -55,11 +55,11 @@ Partial Class ErrorCustomeMessageBox
         Me.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnExit.Image = Global.CommonTools.My.Resources.Resources.newexit
         Me.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnExit.Location = New System.Drawing.Point(267, 179)
+        Me.btnExit.Location = New System.Drawing.Point(177, 175)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(92, 31)
         Me.btnExit.TabIndex = 8
-        Me.btnExit.Text = "خروج"
+        Me.btnExit.Text = "Exit"
         Me.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -79,17 +79,17 @@ Partial Class ErrorCustomeMessageBox
         Me.btnOk.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnOk.Image = Global.CommonTools.My.Resources.Resources._select
         Me.btnOk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnOk.Location = New System.Drawing.Point(365, 179)
+        Me.btnOk.Location = New System.Drawing.Point(72, 175)
         Me.btnOk.Name = "btnOk"
         Me.btnOk.Size = New System.Drawing.Size(99, 31)
         Me.btnOk.TabIndex = 4
-        Me.btnOk.Text = "تائید"
+        Me.btnOk.Text = "Ok"
         Me.btnOk.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnOk.UseVisualStyleBackColor = True
         '
         'ErrorCustomeMessageBox
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnExit
         Me.ClientSize = New System.Drawing.Size(480, 216)

@@ -19,7 +19,7 @@ Partial Class UcComboBox
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.cbo = New System.Windows.Forms.ComboBox
+        Me.cbo = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'cbo
@@ -29,12 +29,12 @@ Partial Class UcComboBox
         Me.cbo.Location = New System.Drawing.Point(0, 0)
         Me.cbo.Name = "cbo"
         Me.cbo.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.cbo.Size = New System.Drawing.Size(120, 22)
+        Me.cbo.Size = New System.Drawing.Size(120, 26)
         Me.cbo.TabIndex = 0
         '
         'UcComboBox
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.cbo)
         Me.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))

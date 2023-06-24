@@ -112,11 +112,6 @@ Public Class FinanceCycles
     Public Sub Edit(ByVal Id As Long, ByVal ConnectionIndex As SqlClient.SqlConnection)
         SQL.ExecuteNonQuery(getEditString() & "   WHERE ID=" & Id, ConnectionIndex)
     End Sub
-
-
-
-
-
     Private Function getEditString() As String
         Dim str As String = "UPDATE " & TableName & " SET "
         If _ID.isSet Then str &= _ID.Name & "=" & IIf(_ID.isDBNull, "Null", _ID.Value & "") & ","

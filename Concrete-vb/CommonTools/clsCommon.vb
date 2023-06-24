@@ -286,7 +286,7 @@ Public Class clsCommon
         End Select
         Return t
     End Function
-    Public Function GetHotelName() As String
+    Public Function GetCONCRETEName() As String
         Dim strSQl As String = "SELECT ISNULL(VALUE,'') AS VALUE FROM CONFIGURATIONS WHERE CODE ='1'"
         Return mnDataLayer.SQL.ExecuteScalar(strSQl, Nothing)
     End Function

@@ -184,8 +184,8 @@ Public Class Report
         rpt.Section2.ReportObjects("ReportDateTime1").Left = vReportLeft + 10
         rpt.Section2.ReportObjects("Reporter").Left = vReportLeft + 10
         rpt.Section2.ReportObjects("Reporter").text = Globals.CurrentUser.Name
-        rpt.Section2.ReportObjects("HotelName1").Left = vReportLeft
-        rpt.Section2.ReportObjects("HotelName1").Width = vReportRight - vReportLeft
+        rpt.Section2.ReportObjects("CONCRETEName1").Left = vReportLeft
+        rpt.Section2.ReportObjects("CONCRETEName1").Width = vReportRight - vReportLeft
         rpt.Section2.ReportObjects("ReportTitle1").Left = vReportLeft
         rpt.Section2.ReportObjects("ReportTitle1").Width = vReportRight - vReportLeft
         rpt.Section2.ReportObjects("boxFrame").Left = vReportLeft - 10

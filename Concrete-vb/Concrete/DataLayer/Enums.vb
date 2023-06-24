@@ -111,36 +111,6 @@ Public Class Enums
             Definite = 2
         End Enum
 
-        ''' <summary>نوع شارژ</summary>
-        Public Enum ChargeType
-            ''' <summary>خودکار</summary>
-            Auto = 1
-            ''' <summary>درصورت استفاده</summary>
-            Consume = 2
-        End Enum
-
-        ''' <summary>نوع محدوديت در شارژ</summary>
-        Public Enum ChargeLimitType
-            ''' <summary>بدون محدوديت</summary>
-            Infinite = 1
-            ''' <summary>ظرفيت اتاق</summary>
-            RoomOccupy = 2
-            ''' <summary>تعداد مهمان</summary>
-            GuestCount = 3
-            ''' <summary>مقدارمشخص</summary>
-            Definite = 4
-        End Enum
-
-        ''' <summary>بازه کنترل محدوديت</summary>
-        Public Enum ChargeLimitDuration
-            ''' <summary>بدون محدوديت</summary>
-            Day = 1
-            ''' <summary>مدت اقامت</summary>
-            ResidentTime = 2
-            ''' <summary>قرارداد</summary>
-            Contract = 3
-        End Enum
-
         ''' <summary>انواع شهرها</summary>
         Public Enum CityType
             ''' <summary>کشور</summary>
@@ -192,33 +162,6 @@ Public Class Enums
             Cancel = 9
         End Enum
 
-        ''' <summary>وضعيتهاي اتاق مهمانان رجيسترکارت</summary>
-        Public Enum RegisterRoomGuestStatus
-            ''' <summary>موقت</summary>
-            Temporary = 0
-            ''' <summary>فعال</summary>
-            Active = 1
-            ''' <summary>خارج شده</summary>
-            Checkout = 2
-            ''' <summary>تعويض شده</summary>
-            Change = 3
-            ''' <summary>تغيير نوع</summary>
-            ChangeType = 4
-            ''' <summary>ابطال</summary>
-            Cancel = 9
-        End Enum
-
-        ''' <summary>وضعيتهاي مهمانان رجيسترکارت</summary>
-        Public Enum RegisterGuestStatus
-            ''' <summary>موقت</summary>
-            Temporary = 0
-            ''' <summary>فعال</summary>
-            Active = 1
-            ''' <summary>خارج شده</summary>
-            Checkout = 2
-            ''' <summary>ابطال</summary>
-            Cancel = 9
-        End Enum
 
         ''' <summary>وضعيتها</summary>
         Public Enum Status

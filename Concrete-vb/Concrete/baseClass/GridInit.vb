@@ -1,7 +1,5 @@
-''' <summary>تنظيمات گريد </summary>
 Public Class GridInit
-
-Public TableName As String = "GRID_INIT"
+    Public TableName As String = "GRID_INIT"
 #Region "Property"
     Private _ID As DataType.Integer
     Private _PARENT_FORM As DataType.String
@@ -253,9 +251,9 @@ Public TableName As String = "GRID_INIT"
         Dim str As String = ""
         For Each c As stcCondition In Condition
             Dim vOperator As String = SQL.ExecuteScalar("SELECT TITLE FROM DOMAINS   WHERE ID=" & c.Operator)
-            str &= c.Oprand & IIf(c.OpenParenthes, "(", "") & _
-            ColumnNames(c.Name) & " " & vOperator & _
-            IIf(vOperator.Contains("NULL"), "", ColumnQuotation(c.Name) & c.Value & ColumnQuotation(c.Name) & IIf(c.Operator = Enums.Keys.Operators.Between, " AND " & ColumnQuotation(c.Name) & c.Value2 & ColumnQuotation(c.Name), "")) & _
+            str &= c.Oprand & IIf(c.OpenParenthes, "(", "") &
+            ColumnNames(c.Name) & " " & vOperator &
+            IIf(vOperator.Contains("NULL"), "", ColumnQuotation(c.Name) & c.Value & ColumnQuotation(c.Name) & IIf(c.Operator = Enums.Keys.Operators.Between, " AND " & ColumnQuotation(c.Name) & c.Value2 & ColumnQuotation(c.Name), "")) &
             IIf(c.CloseParenthes, ")", "")
         Next
         If str <> "" Then str = "   WHERE " & str
