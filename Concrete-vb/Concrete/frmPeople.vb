@@ -40,14 +40,12 @@ Public Class frmPeople
     Public Sub New(ByVal dr As DataRow, ByVal PeopleType As Enums.Keys.PeopleType)
         InitializeComponent()
         vPeopleType = PeopleType
-        cbSexuality.Initialize(vDomain.Select(Enums.DomainKeys.Gender), "ID", "TITLE")
+        'cbSexuality.Initialize(vDomain.Select(Enums.DomainKeys.Gender), "ID", "TITLE")
         cbSexuality.SelectedValue = Enums.Keys.Gender.Male
         If Not dr Is Nothing Then
             setData(dr)
         End If
         picPicture.Tag = ""
-
-        Utility.setFormObjectTitle("People", Me)
     End Sub
     Private Sub setData(ByVal dr As DataRow)
         vId = dr.Item("id")

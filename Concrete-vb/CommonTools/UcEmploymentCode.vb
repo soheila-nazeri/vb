@@ -96,7 +96,7 @@ Public Class UcEmploymentCode
 
             VID = vfrm.SelectedRow.Item("ID").ToString()
             If mnComponents.Utility.NVL(mnDataLayer.SQL.ExecuteScalar(" SELECT ISNULL(VALUE,0) FROM PEOPLE_PROPERTIES WHERE PEO_ID=" & VID & " AND TYPE = 1231", Nothing), 0) = 0 Then
-                MsgBox("پرسنل مورد نظر غیر فعال است")
+                MsgBox("This Personel is Disabled")
                 Clear()
                 Exit Sub
             End If
@@ -117,7 +117,7 @@ Public Class UcEmploymentCode
         If Not DR Is Nothing Then
             VID = DR.Item("ID")
             If mnComponents.Utility.NVL(mnDataLayer.SQL.ExecuteScalar(" SELECT ISNULL(VALUE,0) FROM PEOPLE_PROPERTIES WHERE PEO_ID=" & VID & " AND TYPE = 1231", Nothing), 0) = 0 Then
-                MsgBox("پرسنل مورد نظر غیر فعال است")
+                MsgBox("This Personel is Disabled")
                 Clear()
                 Exit Sub
             End If

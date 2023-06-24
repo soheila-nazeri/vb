@@ -55,7 +55,6 @@ Public Class frmPeopleList
             btnDelete.Enabled = False
         End If
         grdList.GroupByBoxVisible = False
-        Utility.setFormObjectTitle("People", Me)
     End Sub
     Private Sub setDataSource()
         grdList.DataSource = vDML.selPeopleByFilter(vPeopleType, txtName.Text, txtLastName.Text, txtNationalCode.Text)

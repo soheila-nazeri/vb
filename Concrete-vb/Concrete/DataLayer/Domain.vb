@@ -409,32 +409,32 @@ Public Class Domain
         Return str
     End Function
 
-    Public Function [Select](ByVal Id As Enums.DomainKeys) As DataTable
-        Return SQL.ExecuteDataTable("SELECT * FROM DOMAINS   WHERE DOM_ID=" & Id & "AND ISNULL(STATUS,1151)<>1150  ORDER BY PRIORITY ")
-    End Function
+    'Public Function [Select](ByVal Id As Enums.DomainKeys) As DataTable
+    '    Return SQL.ExecuteDataTable("SELECT * FROM DOMAINS   WHERE DOM_ID=" & Id & "AND ISNULL(STATUS,1151)<>1150  ORDER BY PRIORITY ")
+    'End Function
 
-    Public Function [Select](ByVal Id As Enums.PropertyKeys) As DataTable
-        Return SQL.ExecuteDataTable("SELECT * FROM DOMAINS   WHERE DOM_ID=" & Id & " AND ISNULL(STATUS,1151)<>1150  ORDER BY PRIORITY ")
-    End Function
+    'Public Function [Select](ByVal Id As Enums.PropertyKeys) As DataTable
+    '    Return SQL.ExecuteDataTable("SELECT * FROM DOMAINS   WHERE DOM_ID=" & Id & " AND ISNULL(STATUS,1151)<>1150  ORDER BY PRIORITY ")
+    'End Function
 
     Public Function getTitle(ByVal Id As Integer) As String
         Return SQL.ExecuteScalar("SELECT TITLE FROM DOMAINS   WHERE ID=" & Id)
     End Function
 
-    Public Function getId(ByVal ParentId As Enums.DomainKeys, ByVal Code As Integer) As String
-        Return SQL.ExecuteScalar("SELECT ID FROM DOMAINS   WHERE DOM_ID=" & ParentId & " AND CODE=" & Code)
-    End Function
+    'Public Function getId(ByVal ParentId As Enums.DomainKeys, ByVal Code As Integer) As String
+    '    Return SQL.ExecuteScalar("SELECT ID FROM DOMAINS   WHERE DOM_ID=" & ParentId & " AND CODE=" & Code)
+    'End Function
 
-    Public Function getId(ByVal ParentId As Enums.PropertyKeys, ByVal Code As Integer) As String
-        Return SQL.ExecuteScalar("SELECT ID FROM DOMAINS   WHERE DOM_ID=" & ParentId & " AND CODE=" & Code)
-    End Function
-    Public Function getValue(ByVal ID As Enums.DomainKeys, ByVal DateTime As String) As String
-        Dim str As String
-        str = "SELECT VALUE " &
-              "FROM DOMAIN_VALUES " &
-              "  WHERE DOM_ID=" & ID & " AND " & IIf(DateTime = "", " TO_DATE_TIME IS NULL ", "'" & DateTime & "' BETWEEN FROM_DATE_TIME AND ISNULL(TO_DATE_TIME, '1500/01/01')")
-        Return SQL.ExecuteScalar(str)
-    End Function
+    'Public Function getId(ByVal ParentId As Enums.PropertyKeys, ByVal Code As Integer) As String
+    '    Return SQL.ExecuteScalar("SELECT ID FROM DOMAINS   WHERE DOM_ID=" & ParentId & " AND CODE=" & Code)
+    'End Function
+    'Public Function getValue(ByVal ID As Enums.DomainKeys, ByVal DateTime As String) As String
+    '    Dim str As String
+    '    str = "SELECT VALUE " &
+    '          "FROM DOMAIN_VALUES " &
+    '          "  WHERE DOM_ID=" & ID & " AND " & IIf(DateTime = "", " TO_DATE_TIME IS NULL ", "'" & DateTime & "' BETWEEN FROM_DATE_TIME AND ISNULL(TO_DATE_TIME, '1500/01/01')")
+    '    Return SQL.ExecuteScalar(str)
+    'End Function
     ''' <summary> </summary>
     Public Class clsValues
         Public TableName As String = "DOMAIN_VALUES"
@@ -723,15 +723,7 @@ Public Class Domain
             Next
             Return str
         End Function
-        Public Function selCurrencyTypeCost(ByVal vDate As String) As DataTable
-            If vDate.Trim = "" Then vDate = SQL.getDate()
-            Dim str As String = "SELECT D.ID,D.TITLE, DV.VALUE ,CAST( DV.VALUE AS INT) AS PRICE " & vbCrLf &
-                                "FROM DOMAINS D" & vbCrLf &
-                                "INNER JOIN DOMAIN_VALUES DV ON D.ID=DV.DOM_ID AND DV.TYPE=" & Enums.Keys.DomainValueType.CurrencyTypeCost & "  AND '" & vDate & "' BETWEEN DV.FROM_DATE_TIME AND ISNULL(DV.TO_DATE_TIME,'5000/12/30') " & vbCrLf &
-                                "WHERE D.DOM_ID=" & Enums.PropertyKeys.CurrencyType & vbCrLf &
-                                "ORDER BY D.PRIORITY "
-            Return SQL.ExecuteDataTable(str)
-        End Function
-   End Class
+
+    End Class
 
 End Class

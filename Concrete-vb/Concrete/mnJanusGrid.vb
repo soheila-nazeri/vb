@@ -389,13 +389,13 @@ Public Class mnJanusGrid
             tspSumItems.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {tspItemsSelectAllSum})
             tspItemsSelectAllSum.Name = "tspItemsSelectAllSum"
             tspItemsSelectAllSum.Size = New System.Drawing.Size(176, 22)
-            tspItemsSelectAllSum.Text = "عدم Select همه آیتم ها"
+            tspItemsSelectAllSum.Text = "not select"
         Else
             tspSumItems.Visible = False
         End If
         '===========================
         grd.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False
-        grd.GroupByBoxInfoText = "به منظور دسته بندي بر اساس يك ستون ، آن ستون را به اين قسمت بكشيد"
+        grd.GroupByBoxInfoText = "Move for Grouping"
         grd.AlternatingColors = True
         grd.AlternatingRowFormatStyle.BackColor = Color.LavenderBlush
         grd.FilterMode = Janus.Windows.GridEX.FilterMode.Manual
@@ -1040,7 +1040,7 @@ Public Class mnJanusGrid
                 ExportExcel(grdExporter, vDialog.FileName, False)
             End If
         Catch ex As Exception
-            MsgBox("انتقال گزارش با خطا مواجه شد ")
+            MsgBox("transfer Data Error ")
         End Try
         pnlWait.Visible = False
     End Sub
@@ -1066,48 +1066,6 @@ Public Class mnJanusGrid
         Catch ex As Exception
         End Try
 
-    End Sub
-    Private Sub tspItems_DropDownItemClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolStripItemClickedEventArgs)
-        'Dim strName As String = CType(e.ClickedItem, System.Windows.Forms.ToolStripMenuItem).Text
-        'If strName.ToUpper = "date".ToUpper Then strName = "_date".ToUpper
-        'If strName.ToUpper = "row".ToUpper Then strName = "_row".ToUpper
-
-        'Dim blnCheckedItem As Boolean
-        'If strName = tspItems.DropDownItems.Item(0).Text Then
-        '    If strName = "عدم Select همه آیتم ها" Then
-        '        tspItems.DropDownItems.Item(0).Text = "Select همه آیتم ها"
-        '        blnCheckedItem = False
-        '    Else
-        '        tspItems.DropDownItems.Item(0).Text = "عدم Select همه آیتم ها"
-        '        blnCheckedItem = True
-        '    End If
-        '    For Each Col As System.Windows.Forms.ToolStripMenuItem In tspItems.DropDownItems
-        '        Col.Checked = blnCheckedItem
-        '    Next
-
-        '    CType(e.ClickedItem, System.Windows.Forms.ToolStripMenuItem).Checked = False
-        '    '==================
-        '    Dim grdColumn As Janus.Windows.GridEX.GridEXColumn
-        '    For Each grdColumn In grd.RootTable.Columns
-        '        grdColumn.Visible = blnCheckedItem
-        '    Next
-        '    '==================
-        'ElseIf strName = tspItems.DropDownItems.Item(1).Text Then
-        '    CType(e.ClickedItem, System.Windows.Forms.ToolStripMenuItem).Checked = Not (CType(e.ClickedItem, System.Windows.Forms.ToolStripMenuItem).Checked)
-        '    '===============
-        'Else
-        '    strName = CType(e.ClickedItem, System.Windows.Forms.ToolStripMenuItem).Name
-        '    If strName.ToUpper = "date".ToUpper Then strName = "_date".ToUpper
-        '    If strName.ToUpper = "row".ToUpper Then strName = "_row".ToUpper
-        '    If CType(e.ClickedItem, System.Windows.Forms.ToolStripMenuItem).Checked Then
-        '        grd.RootTable.Columns(strName).Visible = False
-        '        CType(e.ClickedItem, System.Windows.Forms.ToolStripMenuItem).Checked = False
-        '    Else
-        '        grd.RootTable.Columns(strName).Visible = True
-        '        CType(e.ClickedItem, System.Windows.Forms.ToolStripMenuItem).Checked = True
-        '    End If
-        'End If
-        '=================================
     End Sub
     Private Sub btnSendToStimulsoft_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSendToStimulsoft.Click
         RaiseEvent Print(Me, e)

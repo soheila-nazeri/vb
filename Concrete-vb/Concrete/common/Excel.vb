@@ -1,12 +1,11 @@
 Imports Microsoft.Office.Interop.Excel
 Imports System.Globalization
 Imports System.Threading
-
 Public Class Excel
-  Implements IDisposable
+    Implements IDisposable
     Private App As ApplicationClass
-  Private OriginalCulture As Globalization.CultureInfo
-  Private _OpenFileName As String
+    Private OriginalCulture As Globalization.CultureInfo
+    Private _OpenFileName As String
     Public Enum Category
         Numeric
         Formatted
@@ -18,45 +17,45 @@ Public Class Excel
         App.DisplayAlerts = False
     End Sub
 
-  Public Sub Create(ByVal fileName As String)
-    Try
-      Close()
-      App.Workbooks.Add(XlWBATemplate.xlWBATWorksheet)
-            App.ActiveWorkbook.SaveAs(fileName, _
-                                      XlFileFormat.xlWorkbookNormal, _
-                                      System.Type.Missing, _
-                                      System.Type.Missing, _
-                                      System.Type.Missing, _
-                                      System.Type.Missing, _
-                                      XlSaveAsAccessMode.xlNoChange, _
-                                      System.Type.Missing, _
-                                      System.Type.Missing, _
-                                      System.Type.Missing, _
-                                      System.Type.Missing, _
+    Public Sub Create(ByVal fileName As String)
+        Try
+            Close()
+            App.Workbooks.Add(XlWBATemplate.xlWBATWorksheet)
+            App.ActiveWorkbook.SaveAs(fileName,
+                                      XlFileFormat.xlWorkbookNormal,
+                                      System.Type.Missing,
+                                      System.Type.Missing,
+                                      System.Type.Missing,
+                                      System.Type.Missing,
+                                      XlSaveAsAccessMode.xlNoChange,
+                                      System.Type.Missing,
+                                      System.Type.Missing,
+                                      System.Type.Missing,
+                                      System.Type.Missing,
                                       System.Type.Missing)
-      _OpenFileName = fileName
-    Catch ex As Exception
+            _OpenFileName = fileName
+        Catch ex As Exception
 
-    End Try
+        End Try
 
-  End Sub
+    End Sub
     Public Sub Open(ByVal Filename As String)
         Try
             Close()
-            App.Workbooks.Open(Filename, _
-                               False, _
-                               False, _
-                               System.Type.Missing, _
-                               System.Type.Missing, _
-                               System.Type.Missing, _
-                               System.Type.Missing, _
-                               System.Type.Missing, _
-                               System.Type.Missing, _
-                               False, _
-                               System.Type.Missing, _
-                               System.Type.Missing, _
-                               False, _
-                               System.Type.Missing, _
+            App.Workbooks.Open(Filename,
+                               False,
+                               False,
+                               System.Type.Missing,
+                               System.Type.Missing,
+                               System.Type.Missing,
+                               System.Type.Missing,
+                               System.Type.Missing,
+                               System.Type.Missing,
+                               False,
+                               System.Type.Missing,
+                               System.Type.Missing,
+                               False,
+                               System.Type.Missing,
                                System.Type.Missing)
             _OpenFileName = Filename
         Catch ex As Exception
@@ -81,17 +80,17 @@ Public Class Excel
     Public Sub SaveAs(ByVal newFileName As String)
         If (Not AnyFileOpen) Then Throw New ExcelException("No file is Open")
         Try
-            App.ActiveWorkbook.SaveAs(newFileName, _
-                                              XlFileFormat.xlWorkbookNormal, _
-                                              System.Type.Missing, _
-                                              System.Type.Missing, _
-                                              System.Type.Missing, _
-                                              System.Type.Missing, _
-                                              XlSaveAsAccessMode.xlNoChange, _
-                                              System.Type.Missing, _
-                                              System.Type.Missing, _
-                                              System.Type.Missing, _
-                                              System.Type.Missing, _
+            App.ActiveWorkbook.SaveAs(newFileName,
+                                              XlFileFormat.xlWorkbookNormal,
+                                              System.Type.Missing,
+                                              System.Type.Missing,
+                                              System.Type.Missing,
+                                              System.Type.Missing,
+                                              XlSaveAsAccessMode.xlNoChange,
+                                              System.Type.Missing,
+                                              System.Type.Missing,
+                                              System.Type.Missing,
+                                              System.Type.Missing,
                                               System.Type.Missing)
             _OpenFileName = newFileName
         Catch ex As Exception
@@ -101,17 +100,17 @@ Public Class Excel
     Public Sub SaveAs2007(ByVal newFileName As String)
         If (Not AnyFileOpen) Then Throw New ExcelException("No file is Open")
         Try
-            App.ActiveWorkbook.SaveAs(newFileName, _
-                                              XlFileFormat.xlOpenXMLWorkbook, _
-                                              System.Type.Missing, _
-                                              System.Type.Missing, _
-                                              System.Type.Missing, _
-                                              System.Type.Missing, _
-                                              XlSaveAsAccessMode.xlNoChange, _
-                                              System.Type.Missing, _
-                                              System.Type.Missing, _
-                                              System.Type.Missing, _
-                                              System.Type.Missing, _
+            App.ActiveWorkbook.SaveAs(newFileName,
+                                              XlFileFormat.xlOpenXMLWorkbook,
+                                              System.Type.Missing,
+                                              System.Type.Missing,
+                                              System.Type.Missing,
+                                              System.Type.Missing,
+                                              XlSaveAsAccessMode.xlNoChange,
+                                              System.Type.Missing,
+                                              System.Type.Missing,
+                                              System.Type.Missing,
+                                              System.Type.Missing,
                                               System.Type.Missing)
             _OpenFileName = newFileName
         Catch ex As Exception
@@ -120,11 +119,11 @@ Public Class Excel
     End Sub
 #Region "Functions to work with Worksheets"
 
-  Public ReadOnly Property ActSheet() As Microsoft.Office.Interop.Excel.Worksheet
+    Public ReadOnly Property ActSheet() As Microsoft.Office.Interop.Excel.Worksheet
 
-    Get
-      Return App.ActiveSheet
-    End Get
+        Get
+            Return App.ActiveSheet
+        End Get
 
     End Property
     Public Function GetSheetsName(ByVal Filename As String) As Data.DataTable
@@ -311,8 +310,8 @@ Public Class Excel
             Throw New ExcelException(String.Format(CultureInfo.InvariantCulture, "Can not set value of cell '{0}'", cellAddress), ex)
         End Try
     End Sub
-    Public Sub SetValue(ByVal RowIndex As Integer, _
-                        ByVal ColIndex As Integer, _
+    Public Sub SetValue(ByVal RowIndex As Integer,
+                        ByVal ColIndex As Integer,
                         ByVal Value As Object)
         Dim rng As Microsoft.Office.Interop.Excel.Range
         If (Not AnyFileOpen) Then Throw New ExcelException("No file is Open")
@@ -323,21 +322,21 @@ Public Class Excel
             Throw New ExcelException(String.Format(CultureInfo.InvariantCulture, "Can not set value of cell '{0}'"), ex)
         End Try
     End Sub
-    Public Sub SetValue(ByVal RowIndex As Integer, _
-                        ByVal ColIndex As Integer, _
-                        ByVal Value As Object, _
-                        ByVal Value2 As Object, _
-                        ByVal FontName As String, _
-                        ByVal FontUnderline As Boolean, _
-                        ByVal FontSize As Integer, _
-                        ByVal FontBold As Boolean, _
-                        ByVal FontColor As String, _
-                        ByVal VerticalAlignment As Microsoft.Office.Interop.Excel.XlVAlign, _
-                        ByVal HorizontalAlignment As Microsoft.Office.Interop.Excel.XlHAlign, _
-                        ByVal Orientation As Integer, _
-                        ByVal WrapText As Boolean, _
-                        ByVal ColumnWidth As Integer, _
-                        ByVal RowHeight As Integer, _
+    Public Sub SetValue(ByVal RowIndex As Integer,
+                        ByVal ColIndex As Integer,
+                        ByVal Value As Object,
+                        ByVal Value2 As Object,
+                        ByVal FontName As String,
+                        ByVal FontUnderline As Boolean,
+                        ByVal FontSize As Integer,
+                        ByVal FontBold As Boolean,
+                        ByVal FontColor As String,
+                        ByVal VerticalAlignment As Microsoft.Office.Interop.Excel.XlVAlign,
+                        ByVal HorizontalAlignment As Microsoft.Office.Interop.Excel.XlHAlign,
+                        ByVal Orientation As Integer,
+                        ByVal WrapText As Boolean,
+                        ByVal ColumnWidth As Integer,
+                        ByVal RowHeight As Integer,
                         ByVal ColorIndex As Integer)
         'Dim vStyle As Style
         'Dim vBorder As Microsoft.Office.Interop.Excel.Border

@@ -141,14 +141,4 @@ Public Class UcComboBox
         End Try
     End Sub
 End Class
-'Private Sub mnComboBox_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.TextChanged
-'    Try
-'        If RealChanche = False Then Return
-'        If Not Me.Text Is Nothing AndAlso Me.Text.Trim <> "" Then
-'            RealChanche = False
-'            If Me.Text.Contains("ي") Then Me.Text = Me.Text.Replace("ي", "ی").Replace("ك", "ک")
-'            RealChanche = True
-'        End If
-'    Catch ex As Exception
-'    End Try
-'End Sub
+

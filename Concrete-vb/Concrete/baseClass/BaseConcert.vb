@@ -45,7 +45,6 @@
         _RequesterCode.Reset()
         _FcId.Reset()
     End Sub
-    ''' <summary>شناسه </summary>
     Public Property Id() As Long
         Get
             Return _Id.Value
@@ -457,16 +456,12 @@
             If _LoadSurface.isSet Then str &= _LoadSurface.Name & "=" & IIf(_LoadSurface.isDBNull, "Null", _LoadSurface.Value & "") & ","
             If _Cubic.isSet Then str &= _Cubic.Name & "=" & IIf(_Cubic.isDBNull, "Null", _Cubic.Value & "") & ","
             If _Cylinder.isSet Then str &= _Cylinder.Name & "=" & IIf(_Cylinder.isDBNull, "Null", _Cylinder.Value & "") & ","
-
-
             If _AvgCylinder.isSet Then str &= _AvgCylinder.Name & "=" & IIf(_AvgCylinder.isDBNull, "Null", _AvgCylinder.Value & "") & ","
             If _Date.isSet Then str &= _Date.Name & "=" & IIf(_Date.isDBNull, "Null", "'" & _Date.Value & "'") & ","
             If _Number.isSet Then str &= _Number.Name & "=" & IIf(_Number.isDBNull, "Null", "'" & _Number.Value & "'") & ","
-
             If _height.isSet Then str &= _height.Name & "=" & IIf(_height.isDBNull, "Null", _height.Value & "") & ","
             If _length.isSet Then str &= _length.Name & "=" & IIf(_length.isDBNull, "Null", _length.Value & "") & ","
             If _width.isSet Then str &= _width.Name & "=" & IIf(_width.isDBNull, "Null", _width.Value & "") & ","
-
             If str.EndsWith(",") Then str = str.Substring(0, str.Length - 1)
             Return str
         End Function

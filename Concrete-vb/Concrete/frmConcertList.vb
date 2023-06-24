@@ -5,14 +5,14 @@ Public Class frmConcertList
     Public Sub New()
         InitializeComponent()
         '====================
-        grdList.Initialize("کارفرما:EMPLOYER_FULL_NAME:120;" &
-                            "درخواست کننده:REQUESTER_FULL_NAME:120;" &
-                            "محل نمونه برداری:LOCATION:90;" &
-                            "شماره گزارش:CODE:110;" &
-                            "تاریخ گزارش:_DATE:140;" &
-                            "شماره درخواست :REQUESTER_CODE:110;" &
-                            "تاریخ نمونه برداری:_DATE:150;" &
-                            "آدرس و پلاک ثبتی:ADDRESS:400")
+        grdList.Initialize("EMPLOYER_FULL_NAME:EMPLOYER_FULL_NAME:120;" &
+                            "REQUESTER_FULL_NAME:REQUESTER_FULL_NAME:120;" &
+                            "LOCATION:LOCATION:90;" &
+                            "CODE:CODE:110;" &
+                            "_DATE:_DATE:140;" &
+                            "REQUESTER_CODE:REQUESTER_CODE:110;" &
+                            "_DATE:_DATE:150;" &
+                            "ADDRESS:ADDRESS:400")
         '====================
         setDataSource()
         grdList.RootTable.GridEX.CellSelectionMode = Janus.Windows.GridEX.CellSelectionMode.EntireRow

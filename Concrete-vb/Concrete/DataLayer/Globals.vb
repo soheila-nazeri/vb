@@ -8,7 +8,7 @@ Public Class Globals
         Private x As Integer
     End Structure
 
-    Public Shared [Alias] As Enums.Alias
+
     Public Shared SessionId As Long
     Public Shared ApplicationId As Long
     Public Shared ForceAudit As Boolean = False
@@ -63,28 +63,5 @@ Public Class Globals
                                         ",'" & My.Computer.Name & "','" & My.User.Name & "','" & VALUE & "')")
 
     End Sub
-    Public Sub AddLog(ByVal Title As String, ByVal AppName As String, ByVal FormName As String, ByVal RowId As Integer, ByVal TableName As String, ByVal Type As Integer, ByVal Value As String, ByVal dtColumn As DataTable)
-        Try
-            SQL.BeginTransaction(Nothing)
-            Dim str As String = "INSERT INTO HOTEL_LOG.DBO.TRANSACTIONS(TITLE,OS_USER_NAME,HOST_NAME,APP_NAME,DATE_TIME,USE_ID,FORM_NAME) " & vbCrLf &
-                                "VALUES('" & Title & "','" & My.User.Name & "','" & My.Computer.Name & "','" & AppName & "','" & Solar.GetDateTime(True) & "'," & Globals.CurrentUser.Id & ",'" & FormName & "')" & vbCrLf &
-                                "select max(id) from HOTEL_LOG.DBO.TRANSACTIONS"
-            Dim TraID As Integer = SQL.ExecuteScalar(str)
 
-            str = "INSERT INTO HOTEL_LOG.DBO.TRANSACTION_TABLES(TRA_ID,ROW_ID,TYPE,TABLE_NAME,VALUE)   " & vbCrLf &
-                   "VALUES(" & TraID & "," & RowId & "," & Type & ",'" & TableName & "','" & Value & "')" & vbCrLf &
-                    "select max(id) from HOTEL_LOG.DBO.TRANSACTION_TABLES"
-            Dim TT_ID As Integer = SQL.ExecuteScalar(str)
-
-            For Each dr As DataRow In dtColumn.Rows
-                str = "INSERT INTO HOTEL_LOG.DBO.TRANSACTION_COLUMNS(TT_ID,COLUMN_NAME,TITLE,OLD_VALUE,NEW_VALUE)   " & vbCrLf &
-                    "VALUES(" & TT_ID & ",'" & dr("COLUMN_NAME") & "','" & dr("TITLE") & "','" & dr("OLD_VALUE") & "','" & dr("NEW_VALUE") & "')"
-                SQL.ExecuteNonQuery(str)
-            Next
-            SQL.CommitTransaction()
-        Catch ex As Exception
-            SQL.RollbackTransaction()
-        End Try
-
-    End Sub
 End Class
