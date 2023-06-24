@@ -31,7 +31,7 @@
     End Sub
     Private Sub btnCancellation_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancellation.Click
         If grdList.CurrentDataRow Is Nothing Then Return
-        If MessageBox.Show("ایا برای Delete مطمئن هستید؟", "توجه", MessageBoxButtons.OKCancel) = Windows.Forms.DialogResult.OK Then
+        If MessageBox.Show("sure to delete ?", "توجه", MessageBoxButtons.OKCancel) = Windows.Forms.DialogResult.OK Then
             Dim clsfinance As New FinanceCycles
             clsfinance.Delete(grdList.CurrentDataRow("id"), Nothing)
             setdata()

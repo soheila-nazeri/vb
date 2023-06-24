@@ -20,24 +20,24 @@ Partial Class frmHelpPrintCommon
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmHelpPrintCommon))
-        Me.btnExit = New System.Windows.Forms.Button
-        Me.picInfo = New System.Windows.Forms.PictureBox
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel
-        Me.Label26 = New System.Windows.Forms.Label
-        Me.Label27 = New System.Windows.Forms.Label
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.Label18 = New System.Windows.Forms.Label
-        Me.Label17 = New System.Windows.Forms.Label
-        Me.Label16 = New System.Windows.Forms.Label
-        Me.Label15 = New System.Windows.Forms.Label
-        Me.Label29 = New System.Windows.Forms.Label
-        Me.Label30 = New System.Windows.Forms.Label
-        Me.Label28 = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
+        Me.btnExit = New System.Windows.Forms.Button()
+        Me.picInfo = New System.Windows.Forms.PictureBox()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.picInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -53,7 +53,7 @@ Partial Class frmHelpPrintCommon
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(71, 31)
         Me.btnExit.TabIndex = 11
-        Me.btnExit.Text = "خروج"
+        Me.btnExit.Text = "Exit"
         Me.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -95,7 +95,7 @@ Partial Class frmHelpPrintCommon
         Me.Label26.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Label26.Size = New System.Drawing.Size(184, 21)
         Me.Label26.TabIndex = 41
-        Me.Label26.Text = "حرکت بین کنترل ها"
+        Me.Label26.Text = "Move"
         Me.Label26.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'Label27
@@ -119,7 +119,7 @@ Partial Class frmHelpPrintCommon
         Me.Label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Label6.Size = New System.Drawing.Size(184, 22)
         Me.Label6.TabIndex = 21
-        Me.Label6.Text = "خروج "
+        Me.Label6.Text = "Exit"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'Label7
@@ -170,7 +170,7 @@ Partial Class frmHelpPrintCommon
         Me.Label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Label5.Size = New System.Drawing.Size(186, 20)
         Me.Label5.TabIndex = 57
-        Me.Label5.Text = "انتخاب "
+        Me.Label5.Text = "Select"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'Label4
@@ -206,7 +206,7 @@ Partial Class frmHelpPrintCommon
         Me.Label17.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Label17.Size = New System.Drawing.Size(186, 20)
         Me.Label17.TabIndex = 54
-        Me.Label17.Text = "به روز رسانی"
+        Me.Label17.Text = "Refresh"
         Me.Label17.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'Label16
@@ -218,7 +218,7 @@ Partial Class frmHelpPrintCommon
         Me.Label16.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Label16.Size = New System.Drawing.Size(186, 20)
         Me.Label16.TabIndex = 53
-        Me.Label16.Text = "حذف فیلتر"
+        Me.Label16.Text = "Delete Filter"
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'Label15
@@ -254,7 +254,7 @@ Partial Class frmHelpPrintCommon
         Me.Label30.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Label30.Size = New System.Drawing.Size(186, 15)
         Me.Label30.TabIndex = 44
-        Me.Label30.Text = "چاپ"
+        Me.Label30.Text = "Print"
         Me.Label30.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'Label28
@@ -263,12 +263,12 @@ Partial Class frmHelpPrintCommon
         Me.Label28.AutoSize = True
         Me.Label28.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Label28.ForeColor = System.Drawing.Color.Blue
-        Me.Label28.Location = New System.Drawing.Point(230, 102)
+        Me.Label28.Location = New System.Drawing.Point(92, 102)
         Me.Label28.Name = "Label28"
         Me.Label28.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label28.Size = New System.Drawing.Size(148, 16)
+        Me.Label28.Size = New System.Drawing.Size(85, 21)
         Me.Label28.TabIndex = 49
-        Me.Label28.Text = "لیست کلید های عمومی "
+        Me.Label28.Text = "Public Key"
         '
         'Label1
         '
@@ -276,16 +276,16 @@ Partial Class frmHelpPrintCommon
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Blue
-        Me.Label1.Location = New System.Drawing.Point(282, 3)
+        Me.Label1.Location = New System.Drawing.Point(89, 3)
         Me.Label1.Name = "Label1"
         Me.Label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label1.Size = New System.Drawing.Size(97, 16)
+        Me.Label1.Size = New System.Drawing.Size(104, 21)
         Me.Label1.TabIndex = 52
-        Me.Label1.Text = "کلید های میانبر "
+        Me.Label1.Text = "Shortcut Key"
         '
         'frmHelpPrintCommon
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnExit
         Me.ClientSize = New System.Drawing.Size(391, 182)
@@ -303,7 +303,7 @@ Partial Class frmHelpPrintCommon
         Me.Name = "frmHelpPrintCommon"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "راهنما"
+        Me.Text = "Help"
         CType(Me.picInfo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)

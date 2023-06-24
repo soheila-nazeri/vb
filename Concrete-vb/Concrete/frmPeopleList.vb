@@ -18,27 +18,27 @@ Public Class frmPeopleList
         InitializeComponent()
         vActionType = ActionType
         vPeopleType = PeopleType
-        grdList.Initialize("کدپرسنلی:CODE:70;" &
-                                "نام:FIRST_NAME:70;" &
-                                "نام خانوادگي:LAST_NAME:95;" &
-                                "نام پدر:FATHER_NAME:60;" &
-                                "شماره شناسنامه:CERTIFICATE_NO:70;" &
-                                "کد تفضیلی:ACC_CODE:70;" &
-                                "کد ملی:NATIONAL_CODE:70;" &
-                                "تاريخ تولد:BIRTHDAY:70;" &
-                                "محل تولد:BIRTHPLACE:70;" &
-                                "تاريخ صدور:BIRTH_REGISTER_DATE:150;" &
-                                "محل صدور:BIRTH_REGISTER_PLACE:70;" &
-                                "مليت:NATIONALITY:70;" &
-                                "محل اقامت:RESIDENCE_PLACE:70;" &
-                                "جنسیت:GENDER_TITLE:70;" &
-                                "تاریخ ازدواج:MARITAL_DATE:70;" &
-                                "آدرس:ADDRESS:70;" &
-                                "شغل:JOB_TITLE:70;" &
-                                "محل کار:WORK_PLACE:70;" &
-                                "تلفن:TEL_NO:70;" &
-                                "همراه:MOBILE_NO:70;" &
-                                "تلفن محل کار:JOB_TEL_NO:70")
+        grdList.Initialize("CODE:CODE:70;" &
+                                "FIRST_NAME:FIRST_NAME:70;" &
+                                "LAST_NAME:LAST_NAME:95;" &
+                                "FATHER_NAME:FATHER_NAME:60;" &
+                                "CERTIFICATE_NO:CERTIFICATE_NO:70;" &
+                                "ACC_CODE:ACC_CODE:70;" &
+                                "NATIONAL_CODE:NATIONAL_CODE:70;" &
+                                "BIRTHDAY:BIRTHDAY:70;" &
+                                "BIRTHPLACE:BIRTHPLACE:70;" &
+                                "BIRTH_REGISTER_DATE:BIRTH_REGISTER_DATE:150;" &
+                                "BIRTH_REGISTER_PLACE:BIRTH_REGISTER_PLACE:70;" &
+                                "NATIONALITY:NATIONALITY:70;" &
+                                "RESIDENCE_PLACE:RESIDENCE_PLACE:70;" &
+                                "GENDER_TITLE:GENDER_TITLE:70;" &
+                                "MARITAL_DATE:MARITAL_DATE:70;" &
+                                "ADDRESS:ADDRESS:70;" &
+                                "JOB_TITLE:JOB_TITLE:70;" &
+                                "WORK_PLACE:WORK_PLACE:70;" &
+                                "TEL_NO:TEL_NO:70;" &
+                                "MOBILE_NO:MOBILE_NO:70;" &
+                                "JOB_TEL_NO:JOB_TEL_NO:70")
         setDataSource()
         If vActionType = Enums.FormActionType.SingleSelection Then
             btnSelect.Enabled = True
