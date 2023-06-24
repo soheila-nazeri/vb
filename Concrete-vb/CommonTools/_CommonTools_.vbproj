@@ -149,18 +149,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="UcComboBox.Designer.vb">
-      <DependentUpon>UcComboBox.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UcComboBox.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UcEmploymentCode.Designer.vb">
-      <DependentUpon>UcEmploymentCode.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UcEmploymentCode.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="UcGrid.Designer.vb">
       <DependentUpon>UcGrid.vb</DependentUpon>
     </Compile>
@@ -207,14 +195,6 @@
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UcComboBox.resx">
-      <DependentUpon>UcComboBox.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UcEmploymentCode.resx">
-      <DependentUpon>UcEmploymentCode.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UcGrid.resx">

@@ -1,5 +1,5 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class mnComboBox
+Partial Class ComboBox
     Inherits System.Windows.Forms.ComboBox
 
     'UserControl overrides dispose to clean up the component list.

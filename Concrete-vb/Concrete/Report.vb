@@ -98,7 +98,6 @@ Public Class Report
             vParameterFields.Add(GetParamValue("CompanyName", CompanyName))
             vParameterFields.Add(GetParamValue("ReportTitle", ReportTitle))
             vParameterFields.Add(GetParamValue("ReportDateTime", Solar.GetDateTime(True)))
-            'vParameterFields.Add(GetParamValue("ReportDateTime", ""))
             cryReport.ParameterFieldInfo = vParameterFields
         End If
 
@@ -106,13 +105,8 @@ Public Class Report
         rpt.PrintOptions.PaperSize = PaperSize
         rpt.PrintOptions.PaperOrientation = PaperOrientation
 
-        'rpt.PrintOptions.ApplyPageMargins(vPageMargin)
         rpt.Section3.ReportObjects("Text0").Left = rpt.PrintOptions.PageContentWidth - 500
         rpt.Section3.ReportObjects("fldRow").Left = rpt.PrintOptions.PageContentWidth - 500
-        'If rpt.PrintOptions.PaperOrientation = CrystalDecisions.Shared.PaperOrientation.Landscape Then
-        '  rpt.Section3.ReportObjects("Text0").Left = rpt.Section3.ReportObjects("Text0").Left + 1000
-        '  rpt.Section3.ReportObjects("fldRow").Left = rpt.Section3.ReportObjects("Text0").Left + 1000
-        'End If
         Dim vReportLeft As Integer = 0
         Dim vReportRight As Integer = rpt.Section3.ReportObjects("fldRow").Left + rpt.Section3.ReportObjects("fldRow").Width
         Dim vLeft As Integer = rpt.Section3.ReportObjects("fldRow").Left
@@ -192,8 +186,6 @@ Public Class Report
         CType(rpt.Section2.ReportObjects("boxFrame"), CrystalDecisions.CrystalReports.Engine.BoxObject).Right = vReportRight + 10
         CType(rpt.Section2.ReportObjects("linDetail"), CrystalDecisions.CrystalReports.Engine.LineObject).Left = vReportLeft
         CType(rpt.Section2.ReportObjects("linDetail"), CrystalDecisions.CrystalReports.Engine.LineObject).Right = vReportRight
-        'CType(rpt.Section2.ReportObjects("boxFrame"), CrystalDecisions.CrystalReports.Engine.BoxObject).Bottom = CType(rpt.Section2.ReportObjects("hBox0"), CrystalDecisions.CrystalReports.Engine.BoxObject).Top
-
         For i = j + 1 To 15
             rpt.Section3.ReportObjects("Column" & i & "1").Width = 0
         Next
@@ -222,7 +214,6 @@ Public Class Report
     End Sub
     Public Sub Print()
         cryReport.PrintReport()
-        'CType(rpt, CrystalDecisions.CrystalReports.Engine.ReportClass).PrintToPrinter(1, False, 0, 0)
     End Sub
 
     Public Sub AddText(ByVal Value As String,
@@ -291,12 +282,7 @@ Public Class Report
             CType(Section.ReportObjects("Text" & vTextId), CrystalDecisions.CrystalReports.Engine.TextObject).Border.RightLineStyle = CrystalDecisions.Shared.LineStyle.SingleLine
             CType(Section.ReportObjects("Text" & vTextId), CrystalDecisions.CrystalReports.Engine.TextObject).Border.LeftLineStyle = CrystalDecisions.Shared.LineStyle.SingleLine
         End If
-        'CType(Section.ReportObjects("Text" & vTextId), CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinitions).
-        'Dim z As CrystalDecisions.CrystalReports.Engine.RunningTotalFieldDefinition
-        'z.Item(1).Operation = CrystalDecisions.Shared.SummaryOperation.Sum
-        'z.Item(1).OperationParameter=
     End Sub
-
     Public Shared Function GetParamValue(ByVal paramName As String, ByVal paramValue As String) As CrystalDecisions.Shared.ParameterField
         Dim paramField As New CrystalDecisions.Shared.ParameterField
         Dim discreteVal As New CrystalDecisions.Shared.ParameterDiscreteValue
@@ -305,11 +291,9 @@ Public Class Report
         paramField.CurrentValues.Add(discreteVal)
         Return paramField
     End Function
-
     Private Sub btnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
-
     Private Sub btnExportToExcel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExportToExcel.Click
         Dim vDialog As New SaveFileDialog
         vDialog.Filter = "Microsoft Excel Files (*.xls)|*.xls"
@@ -344,25 +328,10 @@ Public Class Report
             Dim rpt As CrystalDecisions.CrystalReports.Engine.ReportClass = cryReport.ReportSource
             rpt.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.Excel, vDialog.FileName)
             rpt = Nothing
-            MessageBox.Show("انتقال با موفقیت انجام شد")
+            MessageBox.Show("Success!")
         End If
         vDialog = Nothing
-
-        'Dim vOption As New CrystalDecisions.Shared.ExportOptions
-        'vOption.ExportFormatType = CrystalDecisions.Shared.ExportFormatType.RichText
-        'vOption.ExportDestinationType = CrystalDecisions.Shared.ExportDestinationType.DiskFile
-        'Dim vDiskOption As CrystalDecisions.Shared.DiskFileDestinationOptions = CrystalDecisions.Shared.ExportOptions.CreateDiskFileDestinationOptions()
-        'Dim vPath As New SaveFileDialog
-        'vPath.DefaultExt = "xls"
-        'vPath.ShowDialog()
-        'If vPath.FileName <> "" Then
-        '  vDiskOption.DiskFileName = vPath.FileName
-        '  vOption.ExportDestinationOptions = vDiskOption
-        '  rpt.Export(vOption)
-        '  MessageBox.Show("انتقال با موفقیت انجام شد")
-        'End If
     End Sub
-
     Private Sub Report_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
         Select Case e.KeyCode
             Case Keys.F5
@@ -371,5 +340,4 @@ Public Class Report
                 Me.Close()
         End Select
     End Sub
-
 End Class

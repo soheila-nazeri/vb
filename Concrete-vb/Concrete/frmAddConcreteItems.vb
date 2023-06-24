@@ -70,7 +70,7 @@ Public Class frmAddConcreteItems
     Private Function CheckData() As Boolean
         Try
             If IsNumeric(txtNumber.Text) = False Or Trim(txtNumber.Text) = "0" Then
-                vmsg.showMessage("کاربر گرامی مقدار وارد شده صحیح نمی باشد", "", "")
+                vmsg.showMessage("Not Correct", "", "")
                 txtNumber.Text = ""
                 txtNumber.Focus()
                 Return False

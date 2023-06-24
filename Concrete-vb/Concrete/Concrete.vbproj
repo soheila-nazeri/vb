@@ -160,6 +160,12 @@
   <ItemGroup>
     <Compile Include="baseClass\BaseConcert.vb" />
     <Compile Include="baseClass\FinanceCycles.vb" />
+    <Compile Include="ComboBox.Designer.vb">
+      <DependentUpon>ComboBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ComboBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="common\ApplicationEvents.vb" />
     <Compile Include="baseClass\BasePeople.vb" />
     <Compile Include="DataLayer\DataType.vb" />
@@ -167,13 +173,13 @@
     <Compile Include="DataLayer\Enums.vb" />
     <Compile Include="DataLayer\Globals.vb" />
     <Compile Include="DataLayer\User.vb" />
+    <Compile Include="common\Excel.vb" />
     <Compile Include="DateBox.Designer.vb">
       <DependentUpon>DateBox.vb</DependentUpon>
     </Compile>
     <Compile Include="DateBox.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="common\Excel.vb" />
     <Compile Include="dml\CONCRETE_DML.vb" />
     <Compile Include="frmAddConcreteItems.Designer.vb">
       <DependentUpon>frmAddConcreteItems.vb</DependentUpon>
@@ -224,18 +230,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="baseClass\GridInit.vb" />
-    <Compile Include="mnDataGrid.Designer.vb">
-      <DependentUpon>mnDataGrid.vb</DependentUpon>
-    </Compile>
-    <Compile Include="mnDataGrid.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="mnGrid.Designer.vb">
-      <DependentUpon>mnGrid.vb</DependentUpon>
-    </Compile>
-    <Compile Include="mnGrid.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="frmMain.Designer.vb">
       <DependentUpon>frmMain.vb</DependentUpon>
     </Compile>
@@ -255,11 +249,17 @@
     <Compile Include="frmPeopleList.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mnComboBox.Designer.vb">
-      <DependentUpon>mnComboBox.vb</DependentUpon>
+    <Compile Include="mnDataGrid.Designer.vb">
+      <DependentUpon>mnDataGrid.vb</DependentUpon>
     </Compile>
-    <Compile Include="mnComboBox.vb">
-      <SubType>Component</SubType>
+    <Compile Include="mnDataGrid.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mnGrid.Designer.vb">
+      <DependentUpon>mnGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mnGrid.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="mnJanusGrid.Designer.vb">
       <DependentUpon>mnJanusGrid.vb</DependentUpon>
@@ -283,18 +283,24 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="dml\PEOPLE_DML.vb" />
+    <Compile Include="common\Settings.vb" />
+    <Compile Include="common\Solar.vb" />
+    <Compile Include="common\SQL.vb" />
+    <Compile Include="common\Utility.vb" />
     <Compile Include="Report.Designer.vb">
       <DependentUpon>Report.vb</DependentUpon>
     </Compile>
     <Compile Include="Report.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="common\Settings.vb" />
-    <Compile Include="common\Solar.vb" />
-    <Compile Include="common\SQL.vb" />
-    <Compile Include="common\Utility.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ComboBox.resx">
+      <DependentUpon>ComboBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DateBox.resx">
+      <DependentUpon>DateBox.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddConcreteItems.resx">
       <DependentUpon>frmAddConcreteItems.vb</DependentUpon>
     </EmbeddedResource>
@@ -325,6 +331,12 @@
     <EmbeddedResource Include="frmSearchList.resx">
       <DependentUpon>frmSearchList.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="mnDataGrid.resx">
+      <DependentUpon>mnDataGrid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mnGrid.resx">
+      <DependentUpon>mnGrid.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="mnJanusGrid.resx">
       <DependentUpon>mnJanusGrid.vb</DependentUpon>
     </EmbeddedResource>
@@ -340,7 +352,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>

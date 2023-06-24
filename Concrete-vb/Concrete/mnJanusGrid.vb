@@ -73,27 +73,6 @@ Public Class mnJanusGrid
             chkSelectAll.Visible = value
         End Set
     End Property
-    'Private vSelFilterData As DataTable
-    'Public Property SelFilterData() As DataTable
-    'Get
-    '    Dim dtcopy As DataTable = Me.DataView.ToTable.Clone
-    '    Try
-    '        Dim x() As Janus.Windows.GridEX.GridEXRow = Me.RootTable.GridEX.GetDataRows
-    '        If x.Length = 0 Then Return Nothing
-    '        Dim drv As DataRowView
-    '        For j As Integer = 0 To x.Length - 1
-    '            drv = x(j).DataRow
-    '            dtcopy.ImportRow(drv.Row)
-    '        Next
-    '        vSelFilterData = dtcopy.Copy
-    '    Catch ex As Exception
-    '    End Try
-
-    '    Return vSelFilterData
-    'End Get
-    'Set(ByVal value As DataTable)
-    'End Set
-    'End Property
 #Region "Event"
     Private Sub grd_CellEdited(ByVal sender As Object, ByVal e As Janus.Windows.GridEX.ColumnActionEventArgs) Handles grd.CellEdited
         RaiseEvent CellEdited(sender, e)
