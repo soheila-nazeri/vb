@@ -355,7 +355,7 @@ Partial Class frmReceipt
         'btnCancel
         '
         Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnCancel.Image = Global.Concrete.My.Resources.Resources.Del
+
         Me.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCancel.Location = New System.Drawing.Point(508, 0)
         Me.btnCancel.Name = "btnCancel"
@@ -369,7 +369,7 @@ Partial Class frmReceipt
         '
         Me.BtnOk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.BtnOk.Dock = System.Windows.Forms.DockStyle.Left
-        Me.BtnOk.Image = Global.Concrete.My.Resources.Resources.check
+
         Me.BtnOk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnOk.Location = New System.Drawing.Point(377, 0)
         Me.BtnOk.Name = "BtnOk"
@@ -383,7 +383,6 @@ Partial Class frmReceipt
         '
         Me.btnCancellation.BackColor = System.Drawing.SystemColors.Control
         Me.btnCancellation.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnCancellation.Image = Global.Concrete.My.Resources.Resources.Del
         Me.btnCancellation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCancellation.Location = New System.Drawing.Point(259, 0)
         Me.btnCancellation.Name = "btnCancellation"
@@ -397,7 +396,7 @@ Partial Class frmReceipt
         '
         Me.btnEdit.BackColor = System.Drawing.SystemColors.Control
         Me.btnEdit.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnEdit.Image = Global.Concrete.My.Resources.Resources.edit
+
         Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnEdit.Location = New System.Drawing.Point(128, 0)
         Me.btnEdit.Name = "btnEdit"
@@ -411,7 +410,6 @@ Partial Class frmReceipt
         '
         Me.btnAdd.BackColor = System.Drawing.SystemColors.Control
         Me.btnAdd.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnAdd.Image = Global.Concrete.My.Resources.Resources.add
         Me.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAdd.Location = New System.Drawing.Point(0, 0)
         Me.btnAdd.Name = "btnAdd"

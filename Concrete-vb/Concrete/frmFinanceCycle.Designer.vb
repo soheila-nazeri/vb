@@ -126,7 +126,6 @@ Partial Class frmFinanceCycle
         'btnCancel
         '
         Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnCancel.Image = Global.Concrete.My.Resources.Resources.newexit
         Me.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCancel.Location = New System.Drawing.Point(89, 0)
         Me.btnCancel.Name = "btnCancel"
@@ -140,7 +139,7 @@ Partial Class frmFinanceCycle
         '
         Me.BtnOk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.BtnOk.Dock = System.Windows.Forms.DockStyle.Left
-        Me.BtnOk.Image = Global.Concrete.My.Resources.Resources.check
+
         Me.BtnOk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnOk.Location = New System.Drawing.Point(0, 0)
         Me.BtnOk.Name = "BtnOk"
