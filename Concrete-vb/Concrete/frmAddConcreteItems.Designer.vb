@@ -71,7 +71,6 @@ Partial Class frmAddConcreteItems
         'btnCancel
         '
         Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnCancel.Image = Global.Concrete.My.Resources.Resources.Del
         Me.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCancel.Location = New System.Drawing.Point(117, 0)
         Me.btnCancel.Name = "btnCancel"
@@ -85,7 +84,6 @@ Partial Class frmAddConcreteItems
         '
         Me.BtnOk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.BtnOk.Dock = System.Windows.Forms.DockStyle.Left
-        Me.BtnOk.Image = Global.Concrete.My.Resources.Resources.add
         Me.BtnOk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnOk.Location = New System.Drawing.Point(0, 0)
         Me.BtnOk.Name = "BtnOk"

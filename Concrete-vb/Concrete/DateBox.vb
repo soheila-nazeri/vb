@@ -81,7 +81,7 @@ Public Class DateBox
         ElseIf e.KeyCode = Keys.Left Then
             vKeyType = enmKeyType.Left
         ElseIf e.KeyCode = Keys.F3 Then
-            datDate.Text = Solar.GetDate(True)
+            datDate.Text = DateTime.Today.ToString("yyyy-MM-dd")
         ElseIf Not ((e.KeyValue >= 48 And e.KeyValue <= 57) Or (e.KeyValue >= 96 And e.KeyValue <= 105)) Then
             e.Handled = False
         ElseIf (e.KeyValue >= 48 And e.KeyValue <= 57) Or (e.KeyValue >= 96 And e.KeyValue <= 105) Then

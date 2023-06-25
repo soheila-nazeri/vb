@@ -69,11 +69,12 @@
         Else
             txtAddress.Text = ""
             txtCode.Text = ""
-            txtDate.Text = Solar.GetDate(True)
+            txtDate.Text = DateTime.Today.ToString("yyyy-MM-dd")
             txtLocation.Text = ""
             txtRequesteCode.Text = ""
             txtUser.Text = Globals.CurrentUserName
-            txtRegisterDate.Text = Solar.GetDateTime(True)
+            txtRegisterDate.Text = DateTime.Today.ToString("yyyy-MM-dd")
+
         End If
         '===================================
     End Sub

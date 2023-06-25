@@ -813,7 +813,7 @@ Public Class mnJanusGrid
         If grd.TotalRow = Janus.Windows.GridEX.InheritableBoolean.True Then
             For I = 0 To Me.Columns.Count - 1
                 If Me.Columns(I).AggregateFunction = Janus.Windows.GridEX.AggregateFunction.Sum Then
-                    Report.AddText(Utility.FormatMoney(Sum(Me.Columns(I).Key)), Report.enmTextAlign.Center, Report.enmParameterPlace.ReportFooter, Me.Columns(I).Key, 5, True)
+                    Report.AddText(Sum(Me.Columns(I).Key), Report.enmTextAlign.Center, Report.enmParameterPlace.ReportFooter, Me.Columns(I).Key, 5, True)
                 End If
             Next
         End If
@@ -1634,7 +1634,7 @@ Public Class mnJanusGrid
         txtReportDate.ClientRectangle = New Stimulsoft.Base.Drawing.RectangleD(0, 0, 1, 0.3)
         txtReportDate.HorAlignment = Stimulsoft.Base.Drawing.StiTextHorAlignment.Center
         txtReportDate.Name = "txtReportDate"
-        txtReportDate.Text.Value = Solar.GetDate(True) ' += New Stimulsoft.Report.Events.StiGetValueEventHandler(txtReportDate__GetValue)
+        'txtReportDate.Text.Value = Solar.GetDate(True) ' += New Stimulsoft.Report.Events.StiGetValueEventHandler(txtReportDate__GetValue)
         txtReportDate.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center
         txtReportDate.Border = New Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, False, 4, New Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black))
         txtReportDate.Brush = New Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent)
@@ -1661,7 +1661,7 @@ Public Class mnJanusGrid
         txtReportTime.ClientRectangle = New Stimulsoft.Base.Drawing.RectangleD(0, 0.3, 1, 0.3)
         txtReportTime.HorAlignment = Stimulsoft.Base.Drawing.StiTextHorAlignment.Center
         txtReportTime.Name = "txtReportTime"
-        txtReportTime.Text.Value = Solar.GetTime(True)
+        txtReportTime.Text.Value = DateTime.Today.ToString("yyyy-MM-dd")
         txtReportTime.VertAlignment = Stimulsoft.Base.Drawing.StiVertAlignment.Center
         txtReportTime.Border = New Stimulsoft.Base.Drawing.StiBorder(Stimulsoft.Base.Drawing.StiBorderSides.None, System.Drawing.Color.Black, 1, Stimulsoft.Base.Drawing.StiPenStyle.Solid, False, 4, New Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Black))
         txtReportTime.Brush = New Stimulsoft.Base.Drawing.StiSolidBrush(System.Drawing.Color.Transparent)

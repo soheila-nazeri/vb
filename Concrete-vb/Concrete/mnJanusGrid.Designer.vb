@@ -90,7 +90,7 @@ Partial Class mnJanusGrid
         'btnPrint
         '
         Me.btnPrint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnPrint.Image = Global.Concrete.My.Resources.Resources.print
+
         Me.btnPrint.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(24, 24)
@@ -152,7 +152,6 @@ Partial Class mnJanusGrid
         'btnExcel
         '
         Me.btnExcel.Enabled = False
-        Me.btnExcel.Image = Global.Concrete.My.Resources.Resources.EXPORT_PRES
         Me.btnExcel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnExcel.Name = "btnExcel"
         Me.btnExcel.Size = New System.Drawing.Size(125, 24)
@@ -161,7 +160,7 @@ Partial Class mnJanusGrid
         'tspSumItems
         '
         Me.tspSumItems.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tspSumItems.Image = Global.Concrete.My.Resources.Resources.CALC
+
         Me.tspSumItems.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tspSumItems.Name = "tspSumItems"
         Me.tspSumItems.Size = New System.Drawing.Size(34, 24)
@@ -170,7 +169,7 @@ Partial Class mnJanusGrid
         'btnCheckAll
         '
         Me.btnCheckAll.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnCheckAll.Image = Global.Concrete.My.Resources.Resources.check
+
         Me.btnCheckAll.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnCheckAll.Name = "btnCheckAll"
         Me.btnCheckAll.Size = New System.Drawing.Size(24, 24)
@@ -179,7 +178,7 @@ Partial Class mnJanusGrid
         'btnSendToStimulsoft
         '
         Me.btnSendToStimulsoft.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnSendToStimulsoft.Image = Global.Concrete.My.Resources.Resources.print
+
         Me.btnSendToStimulsoft.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnSendToStimulsoft.Name = "btnSendToStimulsoft"
         Me.btnSendToStimulsoft.Size = New System.Drawing.Size(24, 24)
@@ -188,7 +187,7 @@ Partial Class mnJanusGrid
         'PrintFit
         '
         Me.PrintFit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.PrintFit.Image = Global.Concrete.My.Resources.Resources.print
+
         Me.PrintFit.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.PrintFit.Name = "PrintFit"
         Me.PrintFit.Size = New System.Drawing.Size(24, 24)
@@ -197,7 +196,7 @@ Partial Class mnJanusGrid
         'btnSaveTemplate
         '
         Me.btnSaveTemplate.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnSaveTemplate.Image = Global.Concrete.My.Resources.Resources.save_check
+
         Me.btnSaveTemplate.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnSaveTemplate.Name = "btnSaveTemplate"
         Me.btnSaveTemplate.Size = New System.Drawing.Size(24, 24)

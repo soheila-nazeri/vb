@@ -92,7 +92,6 @@ Partial Class frmMain
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.Concrete.My.Resources.Resources._2
         Me.PictureBox2.Location = New System.Drawing.Point(343, 309)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(452, 380)
@@ -102,7 +101,6 @@ Partial Class frmMain
         '
         'PictureBox3
         '
-        Me.PictureBox3.Image = Global.Concrete.My.Resources.Resources.images
         Me.PictureBox3.Location = New System.Drawing.Point(679, 58)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(434, 416)
@@ -112,7 +110,7 @@ Partial Class frmMain
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.Concrete.My.Resources.Resources._3
+
         Me.PictureBox1.Location = New System.Drawing.Point(43, 58)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(396, 401)

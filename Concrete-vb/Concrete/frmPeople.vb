@@ -86,13 +86,13 @@ Public Class frmPeople
     End Sub
     Private Sub btnAdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAdd.Click
         If txtName.Text.Trim = "" Then
-            System.Windows.Forms.MessageBox.Show(Utility.getMessage("کاربر گرامی لطفا نام را وارد نمائید"))
+            MessageBox.Show("Please Enter Name ")
             txtName.Focus()
             Return
         End If
 
         If txtLastName.Text.Trim = "" Then
-            System.Windows.Forms.MessageBox.Show(Utility.getMessage("کاربر گرامی لطفا نام خانوادگی را وارد نمائید"))
+            MessageBox.Show(MessageBox.Show("Please Enter LastName "))
             txtLastName.Focus()
             Return
         End If
@@ -127,10 +127,10 @@ Public Class frmPeople
                 vId = vPeople.Insert(Nothing)
             End If
             SQL.CommitTransaction()
-            System.Windows.Forms.MessageBox.Show(Utility.getMessage("اطلاعات با موفقیت ثبت شد"), "ثبت")
+            MessageBox.Show(("اطلاعات با موفقیت ثبت شد"))
         Catch ex As Exception
             SQL.RollbackTransaction()
-            System.Windows.Forms.MessageBox.Show(Utility.getMessage(String.Format("خطا در ثبت {0} ", ex.ToString)), "توجه")
+            MessageBox.Show("err" + ex.ToString())
             Return
         End Try
         Me.DialogResult = Windows.Forms.DialogResult.OK
@@ -148,9 +148,4 @@ Public Class frmPeople
         datBirthRegisterDate.Text = datBirthDay.Text
     End Sub
 
-    Private Sub frmPeople_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
-        Utility.FocusNextControl(sender, e)
-
-    End Sub
-    
 End Class

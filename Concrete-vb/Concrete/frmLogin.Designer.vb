@@ -90,7 +90,6 @@ Partial Class frmLogin
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.Concrete.My.Resources.Resources.images1
         Me.PictureBox2.Location = New System.Drawing.Point(12, 12)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(177, 157)
@@ -100,7 +99,6 @@ Partial Class frmLogin
         '
         'btnCancel
         '
-        Me.btnCancel.Image = Global.Concrete.My.Resources.Resources.newexit
         Me.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCancel.Location = New System.Drawing.Point(369, 128)
         Me.btnCancel.Name = "btnCancel"
@@ -113,7 +111,6 @@ Partial Class frmLogin
         'BtnOk
         '
         Me.BtnOk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnOk.Image = Global.Concrete.My.Resources.Resources.check
         Me.BtnOk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnOk.Location = New System.Drawing.Point(246, 128)
         Me.BtnOk.Name = "BtnOk"

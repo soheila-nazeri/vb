@@ -149,18 +149,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="UcGrid.Designer.vb">
-      <DependentUpon>UcGrid.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UcGrid.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UcListBox.Designer.vb">
-      <DependentUpon>UcListBox.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UcListBox.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmSearchList.resx">
@@ -195,14 +183,6 @@
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UcGrid.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>UcGrid.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UcListBox.resx">
-      <DependentUpon>UcListBox.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

@@ -92,12 +92,12 @@ Public Class Report
             rpt.SetParameterValue("CompanyName", CompanyName)
             rpt.SetParameterValue("ReportTitle", ReportTitle)
             'rpt.SetParameterValue("ReportDateTime", "")
-            rpt.SetParameterValue("ReportDateTime", Solar.GetDateTime(True))
+            rpt.SetParameterValue("ReportDateTime", DateTime.Today.ToString("yyyy-MM-dd"))
         Else
             Dim vParameterFields As New CrystalDecisions.Shared.ParameterFields
             vParameterFields.Add(GetParamValue("CompanyName", CompanyName))
             vParameterFields.Add(GetParamValue("ReportTitle", ReportTitle))
-            vParameterFields.Add(GetParamValue("ReportDateTime", Solar.GetDateTime(True)))
+            vParameterFields.Add(GetParamValue("ReportDateTime", DateTime.Today.ToString("yyyy-MM-dd")))
             cryReport.ParameterFieldInfo = vParameterFields
         End If
 

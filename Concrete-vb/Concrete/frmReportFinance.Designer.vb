@@ -45,7 +45,6 @@ Partial Class frmReportFinance
         '
         Me.btnExit.BackColor = System.Drawing.SystemColors.Control
         Me.btnExit.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnExit.Image = Global.Concrete.My.Resources.Resources.newexit
         Me.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnExit.Location = New System.Drawing.Point(340, 0)
         Me.btnExit.Name = "btnExit"
@@ -59,7 +58,7 @@ Partial Class frmReportFinance
         '
         Me.btnCancellation.BackColor = System.Drawing.SystemColors.Control
         Me.btnCancellation.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnCancellation.Image = Global.Concrete.My.Resources.Resources.Del
+
         Me.btnCancellation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCancellation.Location = New System.Drawing.Point(233, 0)
         Me.btnCancellation.Name = "btnCancellation"
@@ -73,7 +72,7 @@ Partial Class frmReportFinance
         '
         Me.btnEdit.BackColor = System.Drawing.SystemColors.Control
         Me.btnEdit.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnEdit.Image = Global.Concrete.My.Resources.Resources.edit
+
         Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnEdit.Location = New System.Drawing.Point(111, 0)
         Me.btnEdit.Name = "btnEdit"
@@ -87,7 +86,6 @@ Partial Class frmReportFinance
         '
         Me.btnAdd.BackColor = System.Drawing.SystemColors.Control
         Me.btnAdd.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnAdd.Image = Global.Concrete.My.Resources.Resources.add
         Me.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAdd.Location = New System.Drawing.Point(0, 0)
         Me.btnAdd.Name = "btnAdd"

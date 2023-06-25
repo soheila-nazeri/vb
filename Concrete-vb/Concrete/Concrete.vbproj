@@ -267,11 +267,6 @@
     <Compile Include="mnJanusGrid.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
@@ -284,7 +279,6 @@
     </Compile>
     <Compile Include="dml\PEOPLE_DML.vb" />
     <Compile Include="common\Settings.vb" />
-    <Compile Include="common\Solar.vb" />
     <Compile Include="common\SQL.vb" />
     <Compile Include="common\Utility.vb" />
     <Compile Include="Report.Designer.vb">
@@ -345,7 +339,6 @@
       <SubType>Designer</SubType>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report.resx">
       <DependentUpon>Report.vb</DependentUpon>
@@ -365,29 +358,21 @@
     </Content>
     <None Include="Resources\images1.jfif" />
     <None Include="Resources\3.jfif" />
-    <None Include="Resources\images.jfif" />
     <None Include="Resources\2.jfif" />
-    <None Include="Resources\copydoc.jpg" />
     <None Include="Resources\copy.png" />
-    <None Include="Resources\CONTRACT.png" />
     <None Include="Resources\check.png" />
-    <None Include="Resources\chain.jpg" />
     <None Include="Resources\CALC.png" />
     <None Include="Resources\ATT.png" />
     <None Include="Resources\add.png" />
     <None Include="Resources\view.png" />
     <None Include="Resources\VER.png" />
     <None Include="Resources\undo.png" />
-    <None Include="Resources\sort.jpg" />
     <None Include="Resources\save_check.png" />
     <None Include="Resources\remove-filter.png" />
     <None Include="Resources\refresh_icon.png" />
     <None Include="Resources\refresh.png" />
     <None Include="Resources\print.png" />
-    <None Include="Resources\pre_status.png" />
     <None Include="Resources\pre.png" />
-    <None Include="Resources\OK OK PRES.png" />
-    <None Include="Resources\NOT DEFINITE ALL.png" />
     <None Include="Resources\next.png" />
     <None Include="Resources\newexit.png" />
     <None Include="Resources\Navigation-Up-2.gif" />
@@ -397,15 +382,10 @@
     <None Include="Resources\Navigation-Down-2.gif" />
     <None Include="Resources\Navigation_Previous.png" />
     <None Include="Resources\Navigation_Next.png" />
-    <None Include="Resources\merge.jpg" />
     <None Include="Resources\last.png" />
     <None Include="Resources\HELP.png" />
     <None Include="Resources\first.png" />
-    <None Include="Resources\EXPORT_PRES.png" />
-    <None Include="Resources\Edit-Document-icon.png" />
     <None Include="Resources\edit.png" />
-    <None Include="Resources\Document-Copy-icon.png" />
-    <None Include="Resources\doc.jpg" />
     <None Include="Resources\Del.png" />
     <None Include="Resources\cut.png" />
   </ItemGroup>

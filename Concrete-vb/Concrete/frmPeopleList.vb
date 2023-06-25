@@ -89,7 +89,7 @@ Public Class frmPeopleList
     End Sub
     Private Sub btnDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDelete.Click
         If grdList.CurrentDataRow Is Nothing Then Return
-        If System.Windows.Forms.MessageBox.Show(Utility.getMessage("آیا مطمئن هستید؟"), "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+        If MessageBox.Show(("are you sure ?"), "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
             Try
                 vDML.Delete(grdList.CurrentDataRow.Item("ID"), Nothing)
             Catch ex As Exception
@@ -124,7 +124,7 @@ Public Class frmPeopleList
     End Sub
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         If txtLastName.Text.Trim = "" AndAlso txtName.Text.Trim = "" AndAlso txtNationalCode.Text.Trim = "" Then
-            If MessageBox.Show("کاربر گرامی آیا بدون هیچ فیلتری می خواهید تمامی رکوردها نمایش داده شود" & vbCrLf & "در این حالت استخراج اطلاعات زمان بر می باشد", "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            If MessageBox.Show(" without filter ", "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
                 setDataSource()
             End If
         Else

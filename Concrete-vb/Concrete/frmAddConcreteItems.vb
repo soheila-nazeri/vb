@@ -16,7 +16,7 @@ Public Class frmAddConcreteItems
         txtCm2.Text = "0"
         txtCublic.Text = "0"
         txtCylinder.Text = "0"
-        txtDate.Text = Solar.GetDate(True)
+        txtDate.Text = DateTime.Today.ToString("yyyy-MM-dd")
         txtHeight.Text = "0"
         txtlength.Text = "0"
         txtLoadSurface.Text = "0"
@@ -39,7 +39,7 @@ Public Class frmAddConcreteItems
             txtCm2.Text = mnComponents.Utility.NVL(vdr("LOADING_SURFACE_CM2"), 0)
             txtCublic.Text = mnComponents.Utility.NVL(vdr("CUBIC"), 0)
             txtCylinder.Text = mnComponents.Utility.NVL(vdr("CYLINDER"), 0)
-            txtDate.Text = mnComponents.Utility.NVL(vdr("_DATE"), Solar.GetDate(True))
+            txtDate.Text = mnComponents.Utility.NVL(vdr("_DATE"), DateTime.Today.ToString("yyyy-MM-dd"))
             txtHeight.Text = mnComponents.Utility.NVL(vdr("HEIGHT"), 0)
             txtlength.Text = mnComponents.Utility.NVL(vdr("LENGTH"), 0)
             txtLoadSurface.Text = mnComponents.Utility.NVL(vdr("LOAD_SURFACE"), 0)
